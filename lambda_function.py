@@ -20,4 +20,4 @@ def lambda_handler(event, context):
     filename=key
     upload_data = json.dumps(filtered_dict).encode('utf-8')
     s3_client.put_object(Bucket=dest_bucket,Key=filename,Body=upload_data)
-    print('Put Complete & SNS notification send via email')
+    print('Put Complete & SNS notification send via email ')
