@@ -19,5 +19,4 @@ phases:
       - aws s3 cp deployment_package.zip s3://bucket-for-lambda-2468/
       - echo "Updating Lambda function via S3..."
       - aws lambda update-function-code --function-name process_daily_json_file --s3-bucket bucket-for-lambda-2468 --s3-key deployment_package.zip
-
       - echo "Deployment complete!"
